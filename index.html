@@ -1,20 +1,107 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 04 - Integração e Entrega Contínua</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+    }
+    header {
+      padding: 20px 8%;
+      background: #1e293b;
+      border-bottom: 2px solid #38bdf8;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    nav a { color: #38bdf8; text-decoration: none; }
+    .hero {
+      padding: 85px 8%;
+      text-align: center;
+    }
+    h1 { font-size: clamp(30px, 5vw, 52px); }
+    h1 span { color: #38bdf8; }
+    p { color: #cbd5e1; line-height: 1.7; }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 26px;
+      background: #38bdf8;
+      color: #0f172a;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px 8% 80px;
+    }
+    .card {
+      padding: 28px;
+      background: #1e293b;
+      border-radius: 12px;
+      border: 1px solid #334155;
+    }
+    .card h2 { color: #38bdf8; }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #1e293b;
+    }
+  </style>
 </head>
-<body class="w3-light-grey">
+<body>
+  <header>
+    <nav>
+      <strong>Universidade Brasil | ADS</strong>
+      <a href="#conteudo">Conteúdo da Aula</a>
+    </nav>
+  </header>
 
-<!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this exa>
-<div class="w3-content" style="max-width:1400px">
+  <main>
+    <section class="hero">
+      <h1>Integração e <span>Entrega Contínua</span></h1>
+      <p>Aula 04 - Git, Branches, Pull Requests e CI/CD</p>
+      <p>Aprendendo a desenvolver, testar e publicar software.</p>
+      <a class="btn" href="#conteudo">Explorar conteúdo</a>
+    </section>
 
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32">
+    <section class="cards" id="conteudo">
+      <article class="card">
+        <h2>Git e Branches</h2>
+        <p>Organização e versionamento do código-fonte.</p>
+      </article>
+      <article class="card">
+        <h2>Pull Request</h2>
+        <p>Revisão de alterações antes da integração.</p>
+      </article>
+      <article class="card">
+        <h2>GitHub Actions</h2>
+        <p>Automação de testes e integração contínua.</p>
+      </article>
+      <article class="card">
+        <h2>Deploy</h2>
+        <p>Publicação de novas versões da aplicação.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Universidade Brasil - Análise e Desenvolvimento de Sistemas</p>
+    <p>Projeto prático de CI/CD | Aula 04</p>
+  </footer>
+</body>
+</html>
